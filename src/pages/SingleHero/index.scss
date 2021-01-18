@@ -1,0 +1,85 @@
+.singleHero {
+  &.dark {
+    .details {
+      .item {
+        background-color: lighten($color: $dark_bg, $amount: 5%);
+      }
+    }
+  }
+  .info {
+    padding: 35px 15px;
+    margin-top: 20px;
+    .base {
+      width: 100%;
+    }
+    .skill_imgs {
+      display: flex;
+      flex-wrap: wrap;
+      img {
+        margin: 10px;
+      }
+    }
+    @include MediaQuery($xs) {
+      display: flex;
+      flex-direction: column;
+      .skills {
+        margin: 20px 0;
+      }
+    }
+    @include MediaQuery($lg) {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  .details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    padding: 15px;
+    .item {
+      background-color: #ccc;
+      padding: 10px;
+      border-radius: 5px;
+      margin: 5px;
+      background-color: #fff;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .lore {
+    margin-top: 30px;
+    padding: 15px;
+    h2 {
+      text-transform: capitalize;
+    }
+    p {
+      line-height: 1.6;
+    }
+    .item {
+      margin: 40px 0;
+      .group {
+        display: flex;
+        flex-wrap: wrap;
+        .group_item {
+          margin: 10px 15px;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          small {
+            max-width: 100%;
+            font-size: 12px;
+          }
+          img {
+            border-radius: 5px;
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+  }
+}

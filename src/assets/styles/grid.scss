@@ -1,0 +1,35 @@
+%grid {
+  display: grid;
+  grid-gap: 12px;
+  .item {
+    padding: 25px 15px;
+    border-radius: 5px;
+    background-color: #fff;
+    img {
+      width: auto;
+    }
+    .btn_md {
+      color: #fff;
+    }
+    &.dark {
+      background-color: lighten($color: $dark_bg, $amount: 5%);
+    }
+  }
+}
+
+.grid_4 {
+  @extend %grid;
+
+  @include MediaQuery($xs) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  @include MediaQuery($sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include MediaQuery($md) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include MediaQuery($lg) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

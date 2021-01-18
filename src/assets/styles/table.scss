@@ -1,0 +1,76 @@
+table {
+  border-collapse: collapse;
+  min-width: 400px;
+  width: 100%;
+  font-size: 13px;
+  overflow: hidden;
+  border-radius: 5px 5px 0 0;
+  box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2),
+    0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12) !important;
+  margin: 0;
+  thead {
+    tr {
+      background-color: $blue;
+      color: #fff;
+      text-align: left;
+      font-weight: bold;
+    }
+  }
+  th {
+    padding: 20px 15px;
+  }
+  td {
+    padding: 20px 15px;
+    text-align: left;
+    // width: 5% !important;
+    &:nth-of-type(7) {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      button {
+        margin-right: 3px;
+      }
+    }
+  }
+  tbody {
+    tr {
+      border-bottom: 1px solid lighten($color: #ccc, $amount: 10%);
+      background-color: lighten($color: $light-bg, $amount: 3%) !important;
+
+      // &:nth-of-type(1) {
+      //   display: none;
+      // }
+      &:nth-of-type(even) {
+        background-color: lighten($color: $light-bg, $amount: 1%) !important;
+      }
+      td {
+        button {
+          color: $light-theme-text;
+        }
+      }
+    }
+  }
+  &.dark {
+    color: $dark-theme-text;
+    tbody {
+      tr {
+        td {
+          button {
+            background-color: lighten($color: $dark-bg, $amount: 8%);
+            color: $dark-theme-text;
+          }
+        }
+        border-bottom: 1px solid lighten($color: $dark-border, $amount: 10%);
+        background-color: lighten($color: $dark-bg, $amount: 5%) !important;
+
+        &:nth-of-type(1) {
+          display: none;
+        }
+        &:nth-of-type(even) {
+          background-color: lighten($color: $dark-bg, $amount: 3%) !important;
+        }
+      }
+    }
+  }
+}

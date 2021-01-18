@@ -1,0 +1,90 @@
+%container {
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+.container_sm {
+  @include MediaQuery($xs) {
+    width: 90%;
+  }
+  @include MediaQuery($sm) {
+    width: 50%;
+  }
+  @include MediaQuery($md) {
+    width: 40%;
+  }
+  @include MediaQuery($lg) {
+    width: 30%;
+  }
+  @extend %container;
+}
+
+.container_md {
+  @include MediaQuery($xs) {
+    width: 90%;
+  }
+  @include MediaQuery($sm) {
+    width: 50%;
+  }
+  @include MediaQuery($md) {
+    width: 40%;
+  }
+  @include MediaQuery($lg) {
+    width: 50%;
+  }
+  @extend %container;
+}
+
+.container_lg {
+  @include MediaQuery($xs) {
+    width: 90%;
+  }
+  @include MediaQuery($sm) {
+    width: 50%;
+  }
+  @include MediaQuery($md) {
+    width: 60%;
+  }
+  @include MediaQuery($lg) {
+    width: 80%;
+  }
+  @extend %container;
+}
+
+.container {
+  padding-top: 80px;
+}
+
+.page {
+  background-color: $light_bg;
+  min-height: 100vh;
+  width: 100vw;
+  padding-top: 120px;
+  color: $light_theme_text;
+  padding-bottom: 50px;
+  &.dark {
+    background-color: $dark_bg;
+    color: $dark_theme_text;
+    .page_actions {
+      input,
+      select {
+        background-color: lighten($color: $dark_bg, $amount: 5%);
+        color: $dark_theme_text;
+      }
+    }
+  }
+  .page_actions {
+    margin: 30px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: $light_theme_text;
+    input,
+    select {
+      border: none;
+      width: 40%;
+    }
+  }
+}

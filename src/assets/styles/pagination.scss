@@ -1,0 +1,27 @@
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+  &.dark {
+    .pag_item {
+      background-color: lighten($color: $dark-bg, $amount: 5%);
+    }
+  }
+  .pag_item {
+    margin: 0 10px;
+    background-color: lighten($color: $light-bg, $amount: 3%);
+    border-radius: 100%;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: 0.2s linear;
+    &:hover {
+      transform: scale(1.2);
+    }
+    &.active {
+      background-color: $blue;
+      color: #fff;
+    }
+  }
+}

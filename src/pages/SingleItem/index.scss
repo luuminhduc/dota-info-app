@@ -1,0 +1,41 @@
+.singleItem {
+  .components {
+    padding: 15px;
+    .components_imgs {
+      display: flex;
+      flex-wrap: wrap;
+      .link {
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 15px;
+        img {
+          margin-bottom: 10px;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+  .basicInfo {
+    padding: 15px;
+    border-radius: 5px;
+    img {
+      border-radius: 5px;
+      width: auto;
+      margin-right: 50px;
+    }
+
+    @include MediaQuery($xs) {
+      display: flex;
+      flex-direction: column;
+    }
+    @include MediaQuery($lg) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}

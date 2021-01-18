@@ -1,0 +1,44 @@
+.header {
+  h1 {
+    cursor: pointer;
+    .link {
+      background-color: transparent !important;
+      color: $light_theme_text !important;
+    }
+  }
+  &.dark {
+    background-color: lighten($color: $dark_bg, $amount: 5%);
+    color: $dark_theme_text;
+    h1 {
+      .link {
+        background-color: transparent !important;
+        color: $dark_theme_text !important;
+      }
+    }
+    .link {
+      color: $dark_theme_text;
+      background-color: lighten($color: $dark_bg, $amount: 10%);
+    }
+  }
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  color: $light_theme_text;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  .link {
+    color: $light_theme_text;
+    margin: 0 15px;
+    background-color: lighten($color: #ccc, $amount: 10%);
+    padding: 10px;
+    border-radius: 5px;
+    &.active {
+      background-color: $primary-color;
+      color: #fff;
+    }
+  }
+}

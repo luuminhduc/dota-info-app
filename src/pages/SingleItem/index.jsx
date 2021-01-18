@@ -1,7 +1,5 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { NavLink } from "react-router-dom";
-import { selectItem } from "../../redux/action/itemAction/actions";
 
 const SingleItem = () => {
   const commonReducer = useSelector((state) => state.commonReducer);
@@ -10,8 +8,6 @@ const SingleItem = () => {
   const itemReducer = useSelector((state) => state.itemReducer);
 
   const { selectedItem, itemList } = itemReducer;
-
-  const dispatch = useDispatch();
 
   const formatText = (text) => {
     let result = text.split("");

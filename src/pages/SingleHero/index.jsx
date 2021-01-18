@@ -61,6 +61,7 @@ const SingleHero = () => {
           <img
             className="radius_5 mr_5"
             key={idx}
+            alt={idx}
             src={`${imgUrl}${el}_md.png`}
           />
         ))}
